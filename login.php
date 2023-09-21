@@ -15,9 +15,9 @@ $users = [
     "pepa" => "9876"
     
 ];
-var_dump($users);
+
 if (isset($_POST["user"])) {
-    if ($users[0]==$_POST["user"] && $users[1]==$_POST["passwd"]) {
+    if ($users[$_POST["user"]]==$_POST["passwd"]) {
         echo "Welcome, " . $_POST["user"];
     }
     else {
